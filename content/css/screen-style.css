@@ -23,3 +23,15 @@ h5 {
 h6 {
 
 }
+
+.bgImage {
+    background-image: url('../images/home2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Content_container
+{
+    height: auto;
+    width: 100%;
+    
+}
