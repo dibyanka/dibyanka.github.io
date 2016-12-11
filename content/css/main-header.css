@@ -24,11 +24,25 @@
 .menu {
     float: left;
     margin-bottom: 0px;
+  
 }
 
-nav {
-	margin-left: 56px;
-	margin-top: 49px;
+Label {
+    display: inline-block;
+    margin-left: 56px;
+	margin-top: 49px;    
+	font-size: 16px;
+	text-transform: uppercase;
+	margin-right: 12px;
+    width: 100%;
+    float: left;
+    text-align: center;
+    
+}
+
+.navi {
+    padding: 16px;
+    color: #ccc;	
 }
 nav ul {
     position: relative;
@@ -48,17 +62,20 @@ nav li {
     margin-left: 10px;
     margin-top: 50px;
     margin-bottom: 0px;
-    float: none;
+    float: left;
     width: 100%;
     display: inline-block;
 	font-size: 16px;
 	text-transform: uppercase;
 	margin-right: 12px;
+    
 }
+
 .nav-menu {
     float: left;
     width: 89%;
 }
+
 
 /*
  Link style
@@ -137,7 +154,7 @@ nav ul {
 }
 
 .icons {
-	text-align: right;
+	text-align: center;
 }
 
 /* Style-one

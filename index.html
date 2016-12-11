@@ -43,25 +43,16 @@
                              <button class="navbar-toggle collapsed" data-target=".nav-menu" data-toggle="collapse" type="button">
                                  <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                            <div ng-controller="scrollController">
-                     <nav class="nav-menu  clearfix"> 
-                    <ul class="menu">
-                        <li><a href=" " ng-click="goToSection('Home')"> Home </a></li>
-                        <li><a href="#" ng-click="goToSection('Portfolio')"> Portfolio</a></li>
-                        <li><a href="#"> About me</a></li>
-                        <li><a href="#"> Projects</a></li>
-                        <li><a href="#">Contact me</a></li>
-                    </ul>
-                            </nav>  
+                    <Label>
+                          <a class="navi" href="" ng-click="goToSection(x)" ng-repeat="x in ['Home','Portfolio','About me', 'Projects','Contact me']">
+                              {{x}}                              
+                         </a>
+                            
+                        </Label>
                           </div>     
                             
                         </div>
-                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-4 pull-right icons ">
-                             <ul>
-                             <li><a href="https://www.linkedin.com/in/dibyanka-19126729" target="_blank"><i class="fa fa-linkedin" ></i></a></li>
-                             <li><a href="https://web.facebook.com/dibyanka" target="_blank"> <i class="fa fa-facebook" ></i></a></li>
-                             <li><a href="" target="_blank"></a></li>
-                             </ul>                        
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -69,9 +60,7 @@
             </header>
            <!--header section end-->
             <!--Content area start-->
-            <div class="bgImage ">
-                <h6 class="text-right"> Date </h6>
-              
+            <div class="bgImage ">                            
                 <section id="Home" >
             <div class="Content_container text-center "> 
                 </br>
@@ -130,8 +119,17 @@
         <section id="Contact me">
             
             <div class="row Content_container text-center main-footer">
+                </br>
+                </br>
                 <h1 style="color: grey">Contact me</h1>
-                         <div><span>&copy; Dibyanka Development services 2016 </span>
+                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 icons ">
+                     <ul>
+                     <li><a href="https://www.linkedin.com/in/dibyanka" target="_blank"><i class="fa fa-linkedin" ></i></a></li>
+                     <li><a href="https://web.facebook.com/dibyanka" target="_blank"> <i class="fa fa-facebook" ></i></a></li>
+                     <li><a href="" target="_blank"></a></li>
+                     </ul>                        
+                </div>
+                 <div style="color: grey"><span>&copy; Dibyanka Development services 2016 </span>
                              </div>  
                         </div>            
          

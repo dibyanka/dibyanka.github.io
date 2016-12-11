@@ -1,7 +1,9 @@
 .main-footer {
 	background-color: #191d23;
-	width: 100%;
+	width: 101%;
 	padding-bottom: 150px;
+    align-content: center;
+    float: none;
 }
 
 .primary-footer {
