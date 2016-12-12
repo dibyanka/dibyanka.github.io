@@ -16,6 +16,7 @@
 <script src="vendor/bootstrap.js"></script>
 <script src="app/app.js"></script>
 <script src="vendor/jquery.bxslider.min.js"></script>
+<script src="vendor/smooth-scrollbar.js"></script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -28,9 +29,9 @@
 </script>
 
 </head>    
-    <body ng-controller="mainController">
+    <body  class="hide-scroll" >
       
-        <div id="main">
+        <div id="main" class="bgImage" ng-controller="scrollController" >
             <header id="header">
                 <div class="main-header">
                   <div class="container">
@@ -39,17 +40,17 @@
                         <div class="logo"><a href="#"><img src="content/images/deb.png" width="120" height="100"  alt=""/></a>
                         </div>
                         </div>
-                         <div class="col-md-7 col-sm-5 col-xs-5 menu-wrapper" ng-controller="scrollController">
-                             <button class="navbar-toggle collapsed" data-target=".nav-menu" data-toggle="collapse" type="button">
-                                 <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                           <div ng-controller="scrollController">
-                    <Label>
-                          <a class="navi" href="" ng-click="goToSection(x)" ng-repeat="x in ['Home','Portfolio','About me', 'Projects','Contact me']">
-                              {{x}}                              
-                         </a>
-                            
-                        </Label>
-                          </div>     
+                         <div class="col-md-7 col-sm-5 col-xs-5 menu-wrapper">
+                     
+                           <nav du-scroll-container="container">
+                             <ul>
+                                <li><a href="#Home" du-smooth-scroll du-scrollspy>Home</a></li>
+                                <li><a href="#Portfolio" du-smooth-scroll du-scrollspy>Portfolio</a></li>
+                                <li><a href="#About me" du-smooth-scroll du-scrollspy>About me</a></li>
+                                <li><a href="#Projects" du-smooth-scroll du-scrollspy>Projects</a></li>
+                                <li><a href="#Contact me" du-smooth-scroll du-scrollspy>Contact me</a></li>
+                            </ul>
+                         </nav>    
                             
                         </div>
                        
@@ -60,7 +61,7 @@
             </header>
            <!--header section end-->
             <!--Content area start-->
-            <div class="bgImage ">                            
+            <div id="container" du-scroll-container >                            
                 <section id="Home" >
             <div class="Content_container text-center "> 
                 </br>
@@ -95,9 +96,8 @@
                     </div>
                     </section>
 
-                <section id="About me">
-            <div class="Content_container text-center" >
-                
+                <section id="About me">           
+                <div class="Content_container text-center "> 
                 </br>
                     <h1>About me</h1>
                 </br>
@@ -112,11 +112,16 @@
 
                 <section id="Projects">
             <div class="Content_container text-center">
-                
+                </br>
+                <h1 > Projects</h1>
+                </br>
+                <h3>Mainly I have worked on the front end and backend development of websites for the clients of various domains when associated with my last employers </h3>
+                <h3>Banking   E-commerce  Information,Media and Entertainment domain.</h3>
+                <h3>Few samples of my personal work as below</h3>
                 </div>
         </section>
 
-        <section id="Contact me">
+                <section id="Contact me">
             
             <div class="row Content_container text-center main-footer">
                 </br>
@@ -124,9 +129,10 @@
                 <h1 style="color: grey">Contact me</h1>
                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 icons ">
                      <ul>
-                     <li><a href="https://www.linkedin.com/in/dibyanka" target="_blank"><i class="fa fa-linkedin" ></i></a></li>
-                     <li><a href="https://web.facebook.com/dibyanka" target="_blank"> <i class="fa fa-facebook" ></i></a></li>
-                     <li><a href="" target="_blank"></a></li>
+                     <li><a href="mailto:someone@example.com" target="_blank"><i class="fa fa-envelope fa-lg"></i></a></li>
+                     <li><a href="https://www.linkedin.com/in/dibyanka" target="_blank"><i class="fa fa-linkedin fa-lg" ></i></a></li>
+                     <li><a href="https://github.com/dibyanka" target="_blank"> <i class="fa fa-github fa-lg" ></i></a></li>
+                    
                      </ul>                        
                 </div>
                  <div style="color: grey"><span>&copy; Dibyanka Development services 2016 </span>
@@ -134,11 +140,10 @@
                         </div>            
          
         </section>
-            <!--Content area  end-->
-            
+            <!--Content area  end-->            
          
         </div>
-        
+</div>
     </body>
 
 </html>

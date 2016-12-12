@@ -1,16 +1,16 @@
 
 /*global angular */
-var portfolioApp = angular.module('portfolioApp', [ ]);
+var portfolioApp = angular.module('portfolioApp', ['duScroll']);
 
 //create the contrller
 
-portfolioApp.controller('mainController', function ($scope) {
-    'use strict';        
-    $scope.message = 'The initial app is loading';
-                        
-});
+portfolioApp.controller('scrollController', function($scope){
+    var container = angular.element(document.getElementById('container'));
+    
+  }
+);
 
-portfolioApp.run(['$anchorScroll', function ($anchorScroll) 
+/*portfolioApp.run(['$anchorScroll', function ($anchorScroll) 
     {
         $anchorScroll.yOffset = 50;   // always scroll by 50 extra pixels                     
     } ])
@@ -38,4 +38,7 @@ portfolioApp.run(['$anchorScroll', function ($anchorScroll)
                                             }
                                             
                                             ]);
+ */
+
+
 

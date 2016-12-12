@@ -27,11 +27,31 @@ h6 {
 .bgImage {
     background-image: url('../images/home2.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;    
 }
 .Content_container
 {
     height: auto;
     width: 100%;
     
+}
+.hide-scroll {
+    overflow: hidden;
+}
+
+.viewport {
+    overflow: auto;
+
+    /* Make sure the inner div is not larger than the container
+     * so that we have room to scroll.
+     */
+    max-height: 100%;
+
+    /* Pick an arbitrary margin/padding that should be bigger
+     * than the max width of all the scroll bars across
+     * the devices you are targeting.
+     * padding = -margin
+     */
+    margin-right: -100px;
+    padding-right: 100px;
 }

@@ -3,7 +3,10 @@
     width: 100%;
     background: url(../images/header-bg.png) repeat-x;
     min-height: 151px;
-    border-bottom: 2px solid #f9c31e;    
+    border-bottom: 2px solid #f9c31e;  
+    object-position: top;
+    position:relative;z-index:10;
+    
 }
 
 .container
@@ -40,9 +43,32 @@ Label {
     
 }
 
+section {
+      padding: 20px 0 20px 0;
+      margin-bottom: 30px;
+    max-height: 500px;
+    }
+
+#container {
+      overflow: auto;
+      height: 500px;
+      padding: 0;
+      margin: 10px 0 20px 0;
+    }
+
 .navi {
     padding: 16px;
     color: #ccc;	
+}
+.nav{
+    position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #fff;
+      background: rgba(255, 255, 255, 0.8);
+    
 }
 nav ul {
     position: relative;
@@ -56,6 +82,7 @@ nav li {
 	font-size: 16px;
 	text-transform: uppercase;
 	margin-right: 12px;
+    margin-top: 40px;
 }
 
 .nav-menu {
@@ -178,14 +205,16 @@ nav ul {
 	width: 89%;
 }
 
-.fa.fa-google-plus{color:#fff;}
-.fa.fa-google-plus:hover{color:#f9c31e;}
 
-.fa.fa-facebook{color:#fff;}
-.fa.fa-facebook:hover{color:#f9c31e;}
+
+.fa.fa-envelope{color:#fff;}
+.fa.fa-envelope:hover{color:#4d87c7;}
+
+.fa.fa-github{color:#fff;}
+.fa.fa-github:hover{color:#4d87c7;}
 
 .fa.fa-linkedin{color:#fff;}
-.fa.fa-linkedin:hover{color:#f9c31e;}
+.fa.fa-linkedin:hover{color:#4d87c7;}
 
 /*copyright*/
 
