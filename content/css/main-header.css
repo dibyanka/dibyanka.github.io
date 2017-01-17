@@ -1,11 +1,11 @@
 .main-header
 {
     width: 100%;
-    background: url(../images/header-bg.png) repeat-x;
-    min-height: 151px;
+    background: url(../images/header-bg.png) repeat-x;    
     border-bottom: 2px solid #f9c31e;  
     object-position: top;
-    position:relative;z-index:10;
+    max-height: 50px;
+    
     
 }
 
@@ -15,10 +15,6 @@
     width: 100%    
 }
 
-.logo {
-    padding-left: 40px;
-    padding-top: 25px;
-}
 
 @media only screen and (max-width: 992px) and (min-width: 768px)
 .menu {
@@ -26,81 +22,14 @@
 }
 .menu {
     float: left;
-    margin-bottom: 0px;
-  
+    margin-bottom: 0px;  
 }
 
-Label {
-    display: inline-block;
-    margin-left: 56px;
-	margin-top: 49px;    
-	font-size: 16px;
-	text-transform: uppercase;
-	margin-right: 12px;
-    width: 100%;
-    float: left;
-    text-align: center;
-    
-}
-
-section {
-      padding: 20px 0 20px 0;
-      margin-bottom: 30px;
-    max-height: 500px;
-    }
-
-#container {
-      overflow: auto;
-      height: 500px;
-      padding: 0;
-      margin: 10px 0 20px 0;
-    }
-
-.navi {
-    padding: 16px;
-    color: #ccc;	
-}
-.nav{
-    position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #fff;
-      background: rgba(255, 255, 255, 0.8);
-    
-}
-nav ul {
-    position: relative;
-}
-ul {
-    list-style-type: disc;
-    margin: 0 0 1em 0;
-}
-nav li {    
-    display: inline-block;
-	font-size: 16px;
-	text-transform: uppercase;
-	margin-right: 12px;
-    margin-top: 40px;
-}
-
-.nav-menu {
-    margin-left: 10px;
-    margin-top: 50px;
-    margin-bottom: 0px;
-    float: left;
-    width: 100%;
-    display: inline-block;
-	font-size: 16px;
-	text-transform: uppercase;
-	margin-right: 12px;
-    
-}
-
-.nav-menu {
-    float: left;
-    width: 89%;
+#list li a{
+	color: #dff0d8;
+	}
+#list li a:hover {
+	color:#337ab7;
 }
 
 
@@ -124,55 +53,7 @@ a:active {
 
 /*-------------------------*/
 
-nav li a {
-	color: #fff;
-	display: inline-block;
-	font-family: 'Lato', sans-serif;
-	font-weight: 700;
-	padding: 16px 12px;
-}
-nav li a:hover, nav li a:focus {
-	color: #f9c31e;
-}
 
-nav ul {
-	position: relative;
-}
-/* Clear Floated Elements
- ----------------------------------------------------------------------------------------------------*/
-.clear {
-	clear: both;
-	display: block;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 0;
-}
-
-.clearfix:after {
-	clear: both;
-	content: ' ';
-	display: block;
-	font-size: 0;
-	line-height: 0;
-	visibility: hidden;
-	width: 0;
-	height: 0;
-}
-
-.clearfix {
-	display: inline-block;
-}
-
-* html .clearfix {
-	height: 1%;
-}
-
-.clearfix {
-	display: block;
-}
-
-/* icons -------------*/
 
 .icons li {
 	display: inline-block;

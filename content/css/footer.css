@@ -1,9 +1,11 @@
 .main-footer {
-	background-color: #191d23;
+	background-color: #333;
 	width: 101%;
-	padding-bottom: 150px;
+	padding-bottom: 10px;
     align-content: center;
     float: none;
+    height: 250px;
+    margin-top: 10px
 }
 
 .primary-footer {
