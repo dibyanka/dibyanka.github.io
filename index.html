@@ -58,12 +58,18 @@
             <div id="Home" class="Content_container text-center section"> 
                 </br>
                 </br>
+                <div id="homeImage">
+                    <img class="mySlides" src="content/images/design.png" style="width:40%">
+                    <img class="mySlides" src="content/images/develop.png" style="width:40%">                    
+                </div>
+                <div class="homeText">
                 <h1 style="color: grey"> Welcome!</h1>
                 <h2> Looking for somebody to build you Website</h2>
                 <h3 style="color: grey">Having some queries related to that!</h3>
                 <h2>So this is the place and I am ready to serve!</h2>
                 
                 <h2>Part time designer </h2> <h2>Part time coder</h2>
+                    </div>
             </br>
              </br>
             </br>
@@ -130,7 +136,7 @@
                  <h1 style="color: grey">Contact me</h1>
                 </br>
                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 icons ">
-                     <ul>
+                     <ul style="align-content: center; align: left">
                      <li><a href="mailto:dibyanka.2401@gmail.com" ><i class="fa fa-envelope fa-lg"></i></a></li>
                      <li><a href="https://www.linkedin.com/in/dibyanka" target="_blank"><i class="fa fa-linkedin fa-lg" ></i></a></li>
                      <li><a href="https://github.com/dibyanka" target="_blank"> <i class="fa fa-github fa-lg" ></i></a></li>
@@ -150,6 +156,22 @@
       
 </div>
 </div>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 <script
 src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 

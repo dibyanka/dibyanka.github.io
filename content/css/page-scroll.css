@@ -4,3 +4,32 @@
     margin-top: 50px;
     
 }
+
+#Home{
+    overflow: hidden
+}
+
+.homeText{
+   position: absolute;
+    right: 0px;
+    width: 60%;  
+    padding: 10px;
+  
+}
+
+.homeImage{
+    position: absolute;   
+    float:left;
+    left: 0px;    
+    margin-bottom: 10px;
+}
+
+.mySlides {
+    position: absolute;
+    float:left;
+    left: 0px;
+    display:none;
+    width:300px;
+    height:500px;
+
+}
