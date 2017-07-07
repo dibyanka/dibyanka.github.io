@@ -22,6 +22,23 @@
 </head>    
 
     <body  >
+         <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          }).catch(function(err) {
+            console.log(err)
+          });
+        });
+      } else {
+        console.log('service worker is not supported');
+      }
+    </script>
         <div id="main" class="bgImage" >
              <nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
             <header id="header" >
@@ -64,7 +81,11 @@
                 </div>
                 <div class="homeText">
                 <h1 style="color: grey"> Welcome!</h1>
-                <h2> Producing high quality responsive websites and exceptional user experience! </h2>
+                <h2> Looking for somebody to build you Website</h2>
+                <h3 style="color: grey">Having some queries related to that!</h3>
+                <h2>So this is the place and I am ready to serve!</h2>
+                
+                <h2>Part time designer </h2> <h2>Part time coder</h2>
                     </div>
             </br>
              </br>
