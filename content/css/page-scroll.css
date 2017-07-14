@@ -9,7 +9,7 @@
     overflow: hidden
 }
 
-.homeText{
+.WelcomeText{
    position: absolute;
     right: 0px;
     width: 60%;  
@@ -32,4 +32,10 @@
     width:300px;
     height:500px;
 
+}
+
+.SectionBody{
+     position: absolute;
+    right: 0px;    
+    padding: 10px;
 }
