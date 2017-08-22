@@ -11,10 +11,10 @@
 
 .WelcomeText{
    position: absolute;
-    right: 0px;
-    width: 60%;  
-    padding: 10px;
-  
+    padding-top: 10%;
+    left: auto;
+    width: 50%;  
+   
 }
 
 .homeImage{
