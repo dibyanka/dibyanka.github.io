@@ -16,6 +16,11 @@
 <link rel="stylesheet" href="content/jquery/jquery.bxslider.css"></link>
 <link rel="icon" href="content/images/girl.ico" type="image/x-icon"></link>
 <link rel="manifest" href="/manifest.json"></link>
+<link rel="stylesheet" href="content/css/responsiveMenu.css"></link>
+ <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
 
 <script src="vendor/angular.min.js"></script>
 <script src="vendor/jquery-2.2.0.js"></script>
@@ -44,6 +49,7 @@
 </head>    
 
     <body>
+        
         <div id="main" class="bgImage" >
              <nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
             <header id="header" >
@@ -52,20 +58,49 @@
         <div id="main" class="bgImage" ng-controller="scrollController" >           
             <header id="header">
                 <div class="main-header">
-             <a class="name navbar-left" alt="Dibyanka's website" href="#Welcome" ><img src="content/images/mainLogo.png"></a>
-                  <div class="container">
+<!--             <a class="name navbar-left"  href="#Welcome" ><img alt="Dibyanka's website" src="content/images/mainLogo.png"></a>-->
+<!--                  <div class="container">-->
                        
-                    <div  class="row">
-                             <ul id="list" class="nav navbar-nav navbar-right navbar-top "> 
+<!--                    <div  class="row">-->
+                           <!-- <ul id="list" class="nav navbar-nav navbar-right navbar-top "> 
                                 
                                 <li><a href="#Skills" >Skills</a></li>
                                 <li><a href="#Articles" >Articles</a></li>
                                 <li><a href="#Projects" >Projects</a></li>
                                 <li><a href="#Contactme" >Contact me</a></li>
-                                 <li><a href="content/docs/DIBYANKA_Developer_5years.doc" download="DIBYANKA_Developer_5years.doc" >Download CV</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                                 <li><a href="content/docs/DIBYANKA_Developer_5years.doc" download="DIBYANKA_Developer_5years.doc" >Download CV</a></li> 
+                            </ul>-->
+                       
+
+<div class="responsiveMenu">
+  <nav class="navbar navbar-inverse navbar-static-top">
+<!--    <div class="container">-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><img src="content/images/mainLogo.png" alt="Dibyanka">
+        </a>
+      </div>
+      <div id="navbar3" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#Articles">Articles</a></li>
+            <li><a href="#Projects">Projects</a></li>
+          <li><a href="#Contactme">Contact me</a></li>  
+            <li><a href="content/docs/DIBYANKA_Developer_5years.doc" download="DIBYANKA_Developer_5years.doc" >Download CV</a></li> 
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+<!--    </div>-->
+    <!--/.container-fluid -->
+  </nav>
+</div>
+                                		
+<!--                        </div>-->
+<!--                    </div>-->
                 </div>
             
             </header>
@@ -78,8 +113,8 @@
                 </br>
                 </br>               
                 <div class="WelcomeText">
-                <h1 style="color: white"> <b>Hello! I am Dibyanka </b></h1>
-                    <h3> I'm a self-taught full stack developer who utilizes the latest in Cloud Services(AWS and Azure), MySQL for back end, and many of the leading front end technologies like JavaScript, Angular, Bootstrap, and jQuery. I know how to architect a solution from end-to-end that will harnesses the power of Continious Integration and Continious Delivery to produce a responsive, mobile-first, joyful product.</h3>
+                <h1 style="color: blue"> <b>Hello! I am Dibyanka </b></h1>
+                    <h3 style="color: orange"> I'm a self-taught full stack developer who utilizes the latest in Cloud Services(AWS and Azure), SQL server/Oracle for back end, and many of the leading front end technologies like JavaScript, Angular, Bootstrap, and jQuery. I know how to architect a solution from end-to-end that will harnesses the power of Continious Integration and Continious Delivery to produce a responsive, mobile-first, joyful product.</h3>
                     </div>
                     </br>
                     </br>
@@ -160,7 +195,7 @@
                     
                      </ul>                        
                 </div>
-                 <div style="color: grey"><span>&copy; Dibyanka Development services 2016 </span>
+                 <div style="color: grey"><span>&copy; Dibyanka Development services 2017 </span>
                              </div>  
                 </div>
 

@@ -28,7 +28,17 @@ h6 {
     background-image: url('../images/home3.jpg');
     background-repeat: no-repeat;
     background-size:contain;
+    background-color: grey;
 }
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(images/background-photo-mobile-devices.jpg);
+  }
+    
 .Content_container
 {
     height: auto;

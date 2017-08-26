@@ -1,20 +1,20 @@
 .main-header
 {
     width: 100%;
-    background: url(../images/header-bg.png) repeat-x;    
-    border-bottom: 2px solid #f9c31e;  
+/*   background: url(../images/header-bg.png) repeat-x;    */*/
+/*    border-bottom: 2px solid #f9c31e;  */*/
     object-position: top;
-    max-height: 50px;
+    max-height: 0px;
     
     
 }
 
-.container
+/*.container
 {
     max-width: 1200 px;
     width: 100% ; 
     font-family:Tahoma; 
-}
+}*/
 
 .name
 {   
