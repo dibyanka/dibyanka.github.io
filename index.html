@@ -17,90 +17,48 @@
 <link rel="icon" href="content/images/girl.ico" type="image/x-icon"></link>
 <link rel="manifest" href="/manifest.json"></link>
 <link rel="stylesheet" href="content/css/responsiveMenu.css"></link>
- <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-
-
-<script src="vendor/angular.min.js"></script>
-<script src="vendor/jquery-2.2.0.js"></script>
-<script src="vendor/bootstrap.js"></script>
-<script src="app/app.js"></script>
-<script src="vendor/jquery.bxslider.min.js"></script>
-<script src="vendor/smooth-scrollbar.js"></script>
-<script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-          }).catch(function(err) {
-            console.log(err)
-          });
-        });
-      } else {
-        console.log('service worker is not supported');
-      }
-    </script>
+ 
 
 </head>    
 
-    <body>
+    <body id="page-top">
         
-        <div id="main" class="bgImage" >
-             <nav class="navbar navbar-default navbar-fixed-top" role="navigation" >
+        <div id="main" class="" >
+             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
             <header id="header" >
     <body  class="hide-scroll" >     
              
-        <div id="main" class="bgImage" ng-controller="scrollController" >           
+        <div id="main" class="" ng-controller="scrollController" >           
             <header id="header">
                 <div class="main-header">
-<!--             <a class="name navbar-left"  href="#Welcome" ><img alt="Dibyanka's website" src="content/images/mainLogo.png"></a>-->
-<!--                  <div class="container">-->
-                       
-<!--                    <div  class="row">-->
-                           <!-- <ul id="list" class="nav navbar-nav navbar-right navbar-top "> 
-                                
-                                <li><a href="#Skills" >Skills</a></li>
-                                <li><a href="#Articles" >Articles</a></li>
-                                <li><a href="#Projects" >Projects</a></li>
-                                <li><a href="#Contactme" >Contact me</a></li>
-                                 <li><a href="content/docs/DIBYANKA_Developer_5years.doc" download="DIBYANKA_Developer_5years.doc" >Download CV</a></li> 
-                            </ul>-->
-                       
-
 <div class="responsiveMenu">
   <nav class="navbar navbar-inverse navbar-static-top">
 <!--    <div class="container">-->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img src="content/images/mainLogo.png" alt="Dibyanka">
+        <a class="navbar-brand page-scroll" href="#page-top"><img src="content/images/mainLogo.png" alt="Dibyanka">
         </a>
       </div>
-      <div id="navbar3" class="navbar-collapse collapse">
+<!--      </div>-->
+     
+      <div id="menu-header" class="container">
+      <div id="main-navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#Articles">Articles</a></li>
-            <li><a href="#Projects">Projects</a></li>
-          <li><a href="#Contactme">Contact me</a></li>  
-            <li><a href="content/docs/DIBYANKA_Developer_5years.doc" download="DIBYANKA_Developer_5years.doc" >Download CV</a></li> 
+          <li><a class="page-scroll" href="#Articles">Articles</a></li>
+            <li><a class="page-scroll" href="#Projects">Projects</a></li>
+          <li><a class="page-scroll" href="#Contactme">Contact me</a></li>  
+            <li><a class="page-scroll" href="content/docs/DIBYANKA_Developer_5years.doc" download="DIBYANKA_Developer_5years.doc" >Download CV</a></li>
         </ul>
       </div>
-      <!--/.nav-collapse -->
-<!--    </div>-->
-    <!--/.container-fluid -->
+          </div>
+ 
   </nav>
 </div>
-                                		
-<!--                        </div>-->
-<!--                    </div>-->
                 </div>
             
             </header>
@@ -109,12 +67,14 @@
             <!--Content area start-->
          
 
-            <div id="Welcome" class="Content_container text-center section"> 
+            <div id="Welcome" class=" bgImage Content_container text-center section"> 
                 </br>
                 </br>               
                 <div class="WelcomeText">
-                <h1 style="color: blue"> <b>Hello! I am Dibyanka </b></h1>
-                    <h3 style="color: orange"> I'm a self-taught full stack developer who utilizes the latest in Cloud Services(AWS and Azure), SQL server/Oracle for back end, and many of the leading front end technologies like JavaScript, Angular, Bootstrap, and jQuery. I know how to architect a solution from end-to-end that will harnesses the power of Continious Integration and Continious Delivery to produce a responsive, mobile-first, joyful product.</h3>
+                    
+                     
+                <h1 style="color: #013220"> <b>Hello! I am Dibyanka </b></h1>
+                    <h3 style="color: black"> I'm a self-taught full stack developer who utilizes the latest in Cloud Services(AWS and Azure), SQL server/Oracle for back end, and many of the leading front end technologies like JavaScript, Angular, Bootstrap, and jQuery. I know how to architect a solution from end-to-end that will harnesses the power of Continious Integration and Continious Delivery to produce a responsive, mobile-first, joyful product. Fell free to check out my complete profile on linkedIn</h3>
                     </div>
                     </br>
                     </br>
@@ -130,19 +90,7 @@
                 <h3>Hi,  I am Dibyanka, 
 
                 My experience spans from 2010 and I have been a part of a very wide variety of web projects. My skills and experiences are deep, wide-ranging, and I am always seeking new best practices and methodologies. I embrace change, crave challenge, and pride in my work is very important to me. Click <a href="content/docs/DIBYANKA_Developer_5years.doc" download="DIBYANKA_Developer_5years.doc">here</a> for my updated CV.</h3> 
-                <h3>This website is built as a sample for </br>
-                        -AMP [Accelerated Mobile Pages]</br>
-                        -PWA [Progressive Web App]</br>
-                    </br>
-                    </br>
-                        <h2>As a result the website is</br> 
-                        -Rendered quickly with smooth Response</br>
-                        -Cross platform and cross browser compatible</br>
-                        -Native app on Windows 10, Android and iOS</br>
-                        -Offline available</h2>
-                   
-                    </h3>
-                   
+                
 
                 </br>
                 </br>
@@ -157,7 +105,19 @@
                     <h1>Articles</h1>
                 </br>
                 </br>
-              <h3>  </h3>
+              <h3>This website is built as a sample for </br>
+                        -AMP [Accelerated Mobile Pages]</br>
+                        -PWA [Progressive Web App]</br>
+                    </br>
+                    </br>
+                        <h2>As a result the website is</br> 
+                        -Rendered quickly with smooth Response</br>
+                        -Cross platform and cross browser compatible</br>
+                        -Native app on Windows 10, Android and iOS</br>
+                        -Offline available</h2>
+                   
+                    </h3>
+                   
                 </br>
                 </div>          
 
@@ -169,6 +129,27 @@
                 </br>
                 <h3>I have delivered software projects that allowed businesses to adapt to new conditions and stay on the technology curve. I am a dependable programmer who thrives on complex issues and takes pride in their resolution. I am committed and hard working and get the results. Some of recommendation and appreciation can be found in my linkedin profile.
                 <h3>Banking   E-commerce  Information,Media and Entertainment domain.</h3>
+                    <div class="container">
+  <h2>Progressive Web App implementation</h2>
+  <p>My most recent project involved implementation of PWA on this very website with push notifications which allows user to subscribe/unsubscribe to my website.</p>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Test Push Notfication</button>
+  <div id="demo" class="collapse">
+      </br>
+      <button disabled class="js-push-btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+        Enable Push Messaging
+      </button>
+   <section class="subscription-details js-subscription-details is-invisible">
+      <p>Once you've subscribed your user, you'd send their subscription to your
+      server to store in a database so that when you want to send a message
+      you can lookup the subscription and send a message to it.</p>
+      <p>To simplify things for this code lab copy the following details
+      into the <a href="https://web-push-codelab.appspot.com/">Push Companion
+      Site</a> and it'll send a push message for you, using the application
+      server keys on the site - so make sure they match.</p>
+      <pre><code class="js-subscription-json"></code></pre>
+    </section>
+  </div>
+</div>
                 </div>
         
 
@@ -208,6 +189,36 @@
       
 </div>
 </div>
+<script src="vendor/angular.min.js"></script>
+<script src="vendor/jquery-2.2.0.js"></script>
+<script src="vendor/bootstrap.js"></script>
+<script src="app/app.js"></script>
+<script src="vendor/jquery.bxslider.min.js"></script>
+<script src="vendor/smooth-scrollbar.js"></script>
+<script src="content/js/responsiveMenu.js"></script>
+<script src="pushNotificationMain.js"></script>
+<!--<script>
+      if ('serviceWorker' in navigator && 'PushManager' in window) {
+          console.log('Service Worker and Push is supported');  
+          
+          navigator.serviceWorker.register('service-worker.js').then(function(swReg) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', swReg);
+              swRegistration = swReg;
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          }).catch(function(err) {
+            console.log(err)
+          });
+        
+      } else {
+        console.log('service worker is not supported');
+          console.warn('Push messaging is not supported');
+         pushButton.textContent = 'Push Not Supported';
+      }
+    </script>-->
+
 <script>
 var myIndex = 0;
 carousel();

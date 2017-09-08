@@ -2,8 +2,10 @@
     
     min-height: 1000px;
     margin-top: 50px;
-    padding-top: 80px;    
-}
+    padding-top: 80px; 
+    
+    
+    }
 
 #Home{
     overflow: hidden
@@ -12,9 +14,9 @@
 .WelcomeText{
    position: absolute;
 /*    padding-top: 10%;*/
-    padding-left: 5%;
+/*    padding-left: 5%;*/
     left: auto;
-    width: 50%;  
+    width: 100%;  
    
 }
 

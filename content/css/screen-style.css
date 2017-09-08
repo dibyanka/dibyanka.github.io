@@ -25,10 +25,14 @@ h6 {
 }
 
 .bgImage {
+/*
     background-image: url('../images/home3.jpg');
+    background-position: center top fixed;
     background-repeat: no-repeat;
     background-size:contain;
-    background-color: grey;
+*/
+    background-color: mediumspringgreen;
+  
 }
 
 /* For mobile devices */
@@ -43,8 +47,8 @@ h6 {
 {
     height: auto;
     width: 100%;
-    
 }
+    
 .hide-scroll {
     overflow: hidden;
 }
