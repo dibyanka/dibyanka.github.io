@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+<head>
+    <title>Dibyanka's Portfolio</title>
+    <meta name="theme-color" content="#4285f4">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="content/css/main-header.css"></link>
+    <link rel="stylesheet" href="content/css/screen-style.css"></link>
+    <link rel="stylesheet" href="content/css/bootstrap.css"></link>
+    <link rel="stylesheet" href="content/css/bootstrap.min.css"></link>
+<link rel="stylesheet" href="content/css/bootstrap-theme.css"></link>
+<link rel="stylesheet" href="content/css/font-awesome.min.css"></link>
+<link rel="stylesheet" href="content/css/footer.css"></link>
+<link rel ="stylesheet" href="content/css/page-scroll.css"></link>
+<link rel="stylesheet" href="content/jquery/jquery.bxslider.css"></link>
+<link rel="icon" href="content/images/girl.ico" type="image/x-icon"></link>
+<link rel="manifest" href="/manifest.json"></link>
+<link rel="stylesheet" href="content/css/responsiveMenu.css"></link>
+ 
+
+</head>    
+
+    <body id="page-top">
+        
+        <div id="main" class="" >
+             <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
+            <header id="header" >
+    <body  class="hide-scroll" >     
+             
+        <div id="main" class="" ng-controller="scrollController" >           
+            <header id="header">
+                <div class="main-header">
+<div class="responsiveMenu">
+  <nav class="navbar navbar-inverse navbar-static-top">
+<!--    <div class="container">-->
+      <div class="navbar-header page-scroll">
+       
+          <div id="name" ><a class="navbar-brand " href="#">Dibyanka</a></div>
+    
+
+      </div>
+<!--      </div>-->
+     
+      <div id="menu-header" class="container">
+     
+          </div>
+ 
+  </nav>
+</div>
+                </div>
+            
+            </header>
+            </nav>    
+           <!--header section end-->
+            <!--Content area start-->
+                <div  id="Progressive Web App" class="Content_container text-center sectionArticle headerGrid"> 
+<!--                     <div class="container-fluid">-->
+                        <div class="col align-self-center well well-sm">
+                            
+                    <h4>Progressive Web App</h4>
+                          
+                            </div>
+                        <div class="row">
+                        
+                       <div class="col-sm-9"> 
+                           <div class="gridStyle3">
+                               
+                           <div class="article">
+                               </br>
+                              <h4>Introduction to Progsressive Web App</h4>
+                                
+                               <h6>Published on 20-Aug-2017</h6>
+                               <h6>Author: Dibyanka</h6>                            
+                            </div>
+                    <div> <img src="content/images/PWA.jpg" alt="Progressive Web App" ></div>
+                           <p> PWA, progressive web apps provides amazing user experience on the web. In simple terms, PWAs are regular web pages but can appear to the user as a native mobile app and sit on their home screen. They are fast as they respond quickly, reliable as they load instantly even in varying network conditions and engaging as they are installable and offer a full screen experience of the website. 
+                               </br>
+Steps to make your first progressive web app:
+                            </br>
+1.	Make sure the website be served from HTTPS.
+</br>
+2.	Install Lighthouse (Lighthouse is an open-source, automated tool for improving the performance, quality, and correctness of your web apps.) from https://developers.google.com/web/tools/lighthouse/
+</br>
+3.	There are two major components of a PWA:
+</br>
+3.1.	 Serviceworker : service worker is the worker script which the browser runs in the background, separately from the main browser thread. It acts as a caching agent, handles network requests and store content when used offline. It is event driven. 
+Create a service-worker.js file in the root folder of the application.It should be in the root folder because the scope for service workers is defined by the directory in which the file resides. Add the below code in service-worker.js file for caching of the website.
+
+</br>
+</br>
+var CACHE_NAME = 'my-site-cache-v1'; </br>
+var urlsToCache = [ </br>
+  '/', </br>
+// include the URLs to be cached </br>
+]; </br>
+
+self.addEventListener('install', function(event) { </br>
+1.	  // Perform install steps </br>
+  event.waitUntil( </br>
+    caches.open(CACHE_NAME) </br>
+      .then(function(cache) { </br>
+        console.log('Opened cache'); </br>
+        return cache.addAll(urlsToCache); </br>
+      }) </br>
+  ); </br>
+}); </br>
+
+self.addEventListener('activate', function(event) { </br>
+  var cacheWhitelist = ['pages-cache-v1', 'blog-posts-cache-v1']; </br>
+  event.waitUntil( </br>
+    caches.keys().then(function(cacheNames) { </br>
+      return Promise.all(  </br>
+        cacheNames.map(function(cacheName) { </br>
+          if (cacheWhitelist.indexOf(cacheName) === -1) { </br>
+            return caches.delete(cacheName); </br>
+          } </br>
+        })  </br>
+      );  </br>
+    }) </br>
+  );</br>
+}); </br>
+
+self.addEventListener('fetch', function(event) { </br>
+  event.respondWith( </br>
+    caches.match(event.request)  </br>
+      .then(function(response) {  </br>
+       // Cache hit - return response  </br>
+        if (response) {  </br>
+          return response;  </br>
+        }  </br>
+        return fetch(event.request);  </br>
+      }  </br>
+    )  </br>
+  );  </br>
+});  </br>
+
+In this file, first name the cache, to maintain the version of the files.Once the cache is open,then cache.addAll(urlsToCache)  takes the list of Urls, then fetches the URLs from the server and collects the response in the cache. 
+Once the installation is successful, it will direct to the activate event.Once activated the service pages will control all the pages that load with in its scope and intercept corresponding network requests. 
+The third event mentioned here is ‘fetch’. It is used everytime a response is needed, in this event when a request is made, instead of going to the network to fetch the response, it returns from the cache.
+</br>
+Now, to install  a service worker, it needs to be registered on the the website, which can be done on the javascript page. Below code is used to check if the service worker API is available in the application, if its avaialable 'service-worker.js'  is registered once the page is loaded.
+</br>
+
+<div><script>
+     	 if ('serviceWorker' in navigator) {
+        	window.addEventListener('load', function() {
+        	  navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+          }).catch(function(err) {
+            console.log(err)
+          });
+        });
+      } else {
+        console.log('service worker is not supported');
+      }
+    </script>
+    </div>
+</br>
+
+3.2.	 Manifest:  A web app manifest file is a simple json file which helps in the following </br>
+-	running the web app in full screen mode as a standalone application. </br>
+-	To assign name, background color , theme color of the app </br>
+-	Define the icon which gets saved on your home screen when the web app is installed on the device.Also, the splash screen.
+Once the service- worker is done, add a manifest.js file withe following snippet in it: </br>
+{ </br>
+   "name": "My_first_PWA", </br>
+  "short_name": "MFP", </br>
+  "start_url": ".", </br>
+  "display": "standalone", </br>
+  "background_color": "#FAFAFA", </br>
+    "theme_color": "#512DA8", </br>
+  "orientation": "portrait", </br>
+  "description": "PWA's test app", </br>
+  "icons": [{ </br>
+    "src": "content/images/touch/splashIcon192.png", </br>
+    "sizes": "192x192", </br>
+    "type": "image/png" </br>
+  }, </br>
+  { </br>
+    "src": "content/images/touch/splashIcon256.png", </br>
+    "sizes": "256x256", </br>
+    "type": "image/png" </br>
+  }, </br>
+    { </br>
+    "src": "content/images/touch/splashIcon384.png", </br>
+    "sizes": "384x384", </br>
+    "type": "image/png" </br>
+  }, </br>
+           { </br>
+    "src": "content/images/touch/splashIcon512.png", </br>
+    "sizes": "512x512", </br>
+    "type": "image/png" </br>
+  }], </br>
+  "chrome_related_applications": [{ </br>
+    "platform": "web"¬ </br>
+  }] </br>
+} </br>
+
+Once the manifest.js file is added in the application root folder,refer it in the main index.html file <head> section </br>
+<head> </br>
+<link rel="manifest" href="/manifest.json"></link> </br>
+</head> </br>
+
+Now, once the user adds the web app to the home screen of their device, they will be able to access the application directly, without even opening it in the browser. </br>
+</p>
+                               </h4>
+                               <h3></h3>
+                           </div>
+                       </div>
+                           <div class="col-sm-3">
+                                <div class="gridStyle2 article">
+                                    </br>
+                                <h4>List Of Articles</h4>
+                                <ul><li><a class="seeMore" href="/Article1_PWA.html">Introduction to PWA</a></li>
+                                <li>- </li></ul>
+                                </div>
+                            </div>
+                        </div>
+                                        
+                    
+                    
+                    
+               
+                </div>  
+              
+</div>                     
+        
+            <!--Content area  end-->            
+         
+      
+</div>
+</div>
+<script src="vendor/angular.min.js"></script>
+<script src="vendor/jquery-2.2.0.js"></script>
+<script src="vendor/bootstrap.js"></script>
+<script src="app/app.js"></script>
+<script src="vendor/jquery.bxslider.min.js"></script>
+<script src="vendor/smooth-scrollbar.js"></script>
+<script src="content/js/responsiveMenu.js"></script>
+<script src="pushNotificationMain.js"></script>
+
+<script
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    </body>
+</!doctype html>
+</html>

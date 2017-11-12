@@ -1,11 +1,19 @@
 .section{
     
-    min-height: 1000px;
+    min-height:1000px;
     margin-top: 50px;
     padding-top: 80px; 
     
     
     }
+.sectionArticle{
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.seeMore{
+    color:blue;
+}
 
 #Home{
     overflow: hidden
@@ -14,7 +22,7 @@
 .WelcomeText{
    position: absolute;
 /*    padding-top: 10%;*/
-/*    padding-left: 5%;*/
+    padding-left: 5%;
     left: auto;
     width: 100%;  
    
