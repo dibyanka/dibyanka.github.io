@@ -4,6 +4,8 @@
     min-height: 200px;
     background-color: lightsteelblue;
     border-radius: 15px;
+    text-align: left;  
+    height: auto;
     
 }
   .gridStyle3
@@ -13,7 +15,7 @@
     background-color:lightsteelblue;
     text-align: left;  
     border-radius: 15px;
-        height: -webkit-fill-available
+    height: -webkit-fill-available
     }
     
      .gridStyle2
