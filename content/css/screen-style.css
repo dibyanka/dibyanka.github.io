@@ -1,174 +1,383 @@
-.gridStyle1
-{
-    margin:2px;
-    min-height: 200px;
-    background-color: lightsteelblue;
-    border-radius: 15px;
-    text-align: left;  
-    height: auto;
-    
-}
-  .gridStyle3
-    {
-      margin: 2px;
-/*    min-height: 200px;*/
-    background-color:lightsteelblue;
-    text-align: left;  
-    border-radius: 15px;
-    height: -webkit-fill-available
-    }
-    
-     .gridStyle2
-    {
-    margin: 2px;
-/*    min-height: 200px;*/
-    background-color: lightsteelblue;
-    text-align: center;
-        border-radius: 15px;
-        height: -webkit-fill-available
-    }
-.article
-{
-    margin-left: 20px;
-/*    background-color:lightsteelblue;*/
-    margin-top: 10px;
+/* Global reset: override Bootstrap's body background */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff !important;
 }
 
-p
-{
-     padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-    padding-left: 80px;
+.gridStyle1 {
+  margin: 2px;
+  min-height: 200px;
+  background-color: lightsteelblue;
+  border-radius: 15px;
+  text-align: left;
+  height: auto;
 }
 
+.gridStyle3 {
+  margin: 2px;
+  background-color: lightsteelblue;
+  text-align: left;
+  border-radius: 15px;
+  height: -webkit-fill-available;
+}
+
+.gridStyle2 {
+  margin: 2px;
+  background-color: lightsteelblue;
+  text-align: center;
+  border-radius: 15px;
+  height: -webkit-fill-available;
+}
+
+.article {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* Scope heavy p padding ONLY to content sections, NOT the hero */
+.Content_container p {
+  padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  padding-left: 80px;
+}
 
 /*
  2.0.2) Global Headings
  -----------------------------*/
-h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
-	color: #161e21;
-}
-h1, .h1 {
-	font-size: 50px;
-}
-h2, .h2 {
-	font-size: 30px;
-}
-h3 {
-	font-size: 20px;
-}
-h4 {
-
-}
-h5 {
-
-}
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-
+  font-weight: normal;
+  color: #161e21;
 }
 
-img
-{
-    margin-left: 20%;
-    width: 60%;
-    height: inherit;
-    
+h1,
+.h1 {
+  font-size: 50px;
 }
 
+h2,
+.h2 {
+  font-size: 30px;
+}
 
+h3 {
+  font-size: 20px;
+}
+
+/* Scope img margin/width to content areas only (don't break hero SVG badge) */
+.Content_container img,
+.gridStyle1 img,
+.gridStyle2 img,
+.gridStyle3 img {
+  margin-left: 20%;
+  width: 60%;
+  height: inherit;
+}
 
 .bgImage {
-/*
-    background-image: url('../images/home3.jpg');
-    background-position: center top fixed;
-    background-repeat: no-repeat;
-    background-size:contain;
-*/
-    background-color: lightgrey;
-  
+  background-color: #fff;
 }
 
 /* For mobile devices */
 @media only screen and (max-width: 767px) {
   body {
-    /* The file size of this background image is 93% smaller
-     * to improve page load speed on mobile internet connections */
     background-image: url(images/background-photo-mobile-devices.jpg);
   }
-    
-.Content_container
-{
+
+  .Content_container {
     height: auto;
     width: 100%;
-}
-    
-.hide-scroll {
-/*    overflow: hidden;*/
-/*    background-color: darksalmon;*/
-}
+  }
 
-.viewport {
+  .viewport {
     overflow: auto;
-
-    /* Make sure the inner div is not larger than the container
-     * so that we have room to scroll.
-     */
     max-height: 100%;
-
-    /* Pick an arbitrary margin/padding that should be bigger
-     * than the max width of all the scroll bars across
-     * the devices you are targeting.
-     * padding = -margin
-     */
     margin-right: -100px;
     padding-right: 100px;
+  }
+
+  .headerGrid {
+    display: grid;
+    width: 100%;
+    max-width: 770px;
+    margin: 0 auto;
+    grid-template-rows: 80px auto 80px;
+    grid-gap: 20px;
+    grid-template-areas:
+      "header   header   header"
+      "main     main     sidebar"
+      "footer   footer   footer";
+  }
+
+  .item-2 {
+    background: #33a8a5;
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 30%;
+    grid-template-rows: auto auto;
+    grid-gap: 20px;
+    grid-template-areas:
+      "header header"
+      "article sidebar";
+  }
+
+  .item-6 {
+    background: #3d8bb1;
+    grid-area: article;
+  }
+
+  .item-7 {
+    background: #e03f3f;
+    grid-area: sidebar;
+  }
 }
-    
-    .headerGrid{
-        
-  display: grid;
-  width: 100%;
-  max-width: 770px;
-  margin: 0 auto;
-  
-/*  grid-template-columns: repeat(3, 1fr);*/
-  grid-template-rows: 80px auto 80px;
-  grid-gap: 20px;
-  
-  grid-template-areas: "header   header   header"
-                       "main     main     sidebar"
-                       "footer   footer   footer";
-    }
-    
-   
- .item-1 {
-/*  background: #b03532;*/
-  
+
+/* ================================================
+   HERO SECTION — matches the reference screenshot
+   ================================================ */
+
+/* Override responsiveMenu.css: section { padding: 100px 0 } */
+section#Welcome.hero {
+  padding: 0 !important;
 }
-    
-    .item-2 {
-  background: #33a8a5;
-  grid-area: main;
-  
-  display: grid;
-  
-  grid-template-columns: 1fr 30%;
-  grid-template-rows: auto auto;
-  grid-gap: 20px;
-  
-  grid-template-areas: "header header"
-                       "article sidebar";
-  
+
+/* Override responsiveMenu.css: header { background-image: url(...) }
+   The hidden #header element should take no space */
+header#header {
+  display: none !important;
+  height: 0 !important;
+  overflow: hidden !important;
 }
-    .item-6 {
-  background: #3d8bb1;
-  grid-area: article;
+
+/* Body should be white (not lightgrey) */
+body {
+  background-color: #fff;
 }
-.item-7 {
-  background: #e03f3f;
-  grid-area: sidebar;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #fff;
 }
-    
-  
+
+.hero .hero-blobs {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero .blob {
+  position: absolute;
+  opacity: 0.95;
+}
+
+.hero .blob-left {
+  left: -8%;
+  top: 5%;
+  width: 500px;
+  height: 500px;
+}
+
+.hero .blob-right {
+  right: -6%;
+  bottom: -5%;
+  width: 420px;
+  height: 420px;
+}
+
+/* hero-inner fills the full section height as a flex column */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top row: EK_ logo left, nav pill right */
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2.5rem;
+}
+
+.site-logo {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+  color: #111;
+  position: static;
+}
+
+.site-logo .underscore {
+  display: inline-block;
+  border-bottom: 4px solid #000;
+  margin-left: 2px;
+}
+
+.top-nav-pill {
+  position: static;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13), 0 1px 4px rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 0.65rem 1.6rem;
+}
+
+.top-nav-pill ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+}
+
+.top-nav-pill li {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Center content — vertically centered below the top row */
+.hero-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0 0 1rem;
+  font-weight: 800;
+  color: #111;
+}
+
+/* Override all generic p rules for the subtitle */
+p.hero-subtitle,
+.hero-center p.hero-subtitle {
+  color: #333 !important;
+  max-width: 480px;
+  margin: 0 auto 2rem !important;
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  padding: 0 !important;
+  padding-top: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btn.btn-outline {
+  border: 2px solid #1a1a1a;
+  padding: 0.75rem 1.6rem;
+  border-radius: 14px;
+  color: #111;
+  background: #fff;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.97rem;
+  font-weight: 600;
+  transition: background 0.15s;
+}
+
+.btn.btn-outline:hover {
+  background: #f4f4f4;
+  color: #111;
+}
+
+.hero-links {
+  display: flex;
+  gap: 1.1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-links a {
+  text-decoration: none;
+}
+
+.hero-links .fa-github {
+  color: #111;
+  font-size: 1.4rem;
+}
+
+.linkedin-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0077b5;
+  border-radius: 6px;
+  width: 28px;
+  height: 28px;
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* Override the generic img rule for linkedin SVG */
+.linkedin-badge svg,
+.hero-links svg {
+  width: 18px !important;
+  height: 18px !important;
+  fill: #fff !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.resume-link {
+  color: #1a7a3e !important;
+  font-weight: 600;
+  font-size: 0.97rem;
+}
+
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-top {
+    padding: 1rem 1.2rem;
+  }
+
+  .hero .blob-left,
+  .hero .blob-right {
+    display: none;
+  }
+
+  .top-nav-pill {
+    padding: 0.25rem 0.6rem;
+  }
+
+  .top-nav-pill li {
+    font-size: 0.8rem;
+    gap: 0.2rem;
+  }
+}
